@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   id: min-oro
   displayName: Mineral
-  icon: {fileID: 21300000, guid: 45eb3b94bbdefea4cbad54e2cfc4f877, type: 3}
+  icon: {fileID: 21300000, guid: d17665a41afb9d3498b4e15d33e3dc5d, type: 3}
