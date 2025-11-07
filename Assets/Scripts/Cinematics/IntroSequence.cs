@@ -85,6 +85,10 @@ public class IntroSequence : MonoBehaviour
     {
       yield return StartCoroutine(FinalMalo());
     }
+    else if (escenaActual == "GodEndScene")
+    {
+      yield return StartCoroutine(FinalBueno());
+    }
   }
 
   IEnumerator FinalIntro()
@@ -112,7 +116,6 @@ public class IntroSequence : MonoBehaviour
 
     yield return new WaitForSeconds(1.5f);
     // Mostrar botones
-    botonReintentar.gameObject.SetActive(true);
     botonSalir.gameObject.SetActive(true);
   }
   IEnumerator FinalBueno()
