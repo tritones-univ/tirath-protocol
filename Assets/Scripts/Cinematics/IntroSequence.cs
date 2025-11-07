@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
 
 [System.Serializable]
@@ -23,6 +22,12 @@ public class IntroSequence : MonoBehaviour
   public TextMeshProUGUI textoPrincipal;
   public TextMeshProUGUI textoTitulo;
   public Image panelNegro;
+  public Image panelTexto;
+
+  [Header("Botones Finales")]
+  public Button botonReintentar;
+  public Button botonSalir;
+
   [Header("Audio")]
   public AudioSource musica;
   public AudioSource fxSource;
@@ -35,8 +40,9 @@ public class IntroSequence : MonoBehaviour
   {
     if (musica != null && !musica.isPlaying)
       musica.Play();
-
-    textoTitulo.alpha = 0;
+    if (textoTitulo == null) textoTitulo.alpha = 0;
+    if (botonReintentar != null) botonReintentar.gameObject.SetActive(false);
+    if (botonSalir != null) botonSalir.gameObject.SetActive(false);
 
     StartCoroutine(ReproducirIntro());
   }
@@ -46,13 +52,13 @@ public class IntroSequence : MonoBehaviour
     foreach (var slide in diapositivas)
     {
       // Fade out antes de cambiar
-      yield return StartCoroutine(FadeImage(panelFondo, 0f, 2.5f));
+      yield return StartCoroutine(FadeImage(panelFondo, 0f, 1.5f));
 
       // Cambiar imagen
       panelFondo.sprite = slide.imagen;
 
       // Fade in nueva imagen
-      yield return StartCoroutine(FadeImage(panelFondo, 1f, 2.5f));
+      yield return StartCoroutine(FadeImage(panelFondo, 1f, 1.5f));
       textoPrincipal.text = "";
 
       // Fade in texto
@@ -68,18 +74,14 @@ public class IntroSequence : MonoBehaviour
       // Esperar duración
       yield return new WaitForSeconds(slide.duracion);
     }
-
-    // Mostrar Titulo
-    yield return StartCoroutine(FinalIntro());
     // --- Comportamiento al terminar depende de la escena ---
     string escenaActual = SceneManager.GetActiveScene().name;
-
     if (escenaActual == "IntroScene")
     {
       yield return StartCoroutine(FinalIntro());
       SceneManager.LoadScene(siguienteEscena);
     }
-    else if (escenaActual == "FinalMaloScene")
+    else if (escenaActual == "BadEndScene")
     {
       yield return StartCoroutine(FinalMalo());
     }
@@ -91,25 +93,46 @@ public class IntroSequence : MonoBehaviour
     yield return new WaitForSeconds(1f);
     textoTitulo.text = "";
     textoTitulo.alpha = 1;
-    textoTitulo.gameObject.SetActive(true);
     StartCoroutine(EscribirTexto("TIRATH PROTOCOL", 0.2f, textoTitulo));
     yield return new WaitForSeconds(6f);
   }
+
   IEnumerator FinalMalo()
   {
-    // Desvanecer a negro
-    yield return StartCoroutine(FadeImage(panelNegro, 1f, 1f));
+    // Desvanecer el panel del texto
+    textoPrincipal.text = "";
+    yield return StartCoroutine(FadeImage(panelFondo, 0f, 5f));
+    yield return StartCoroutine(FadeImage(panelTexto, 0f, 5f));
     yield return new WaitForSeconds(1f);
 
     // Mostrar mensaje de "MISIÓN FALLIDA"
     textoTitulo.text = "";
     textoTitulo.alpha = 1;
-    textoTitulo.gameObject.SetActive(true);
     yield return StartCoroutine(EscribirTexto("MISIÓN FALLIDA", 0.15f, textoTitulo));
 
     yield return new WaitForSeconds(1.5f);
+    // Mostrar botones
+    botonReintentar.gameObject.SetActive(true);
+    botonSalir.gameObject.SetActive(true);
   }
+  IEnumerator FinalBueno()
+  {
+    // Desvanecer el panel del texto
+    textoPrincipal.text = "";
+    yield return StartCoroutine(FadeImage(panelFondo, 0f, 5f));
+    yield return StartCoroutine(FadeImage(panelTexto, 0f, 5f));
+    yield return new WaitForSeconds(1f);
 
+    // Mostrar mensaje de "MISIÓN FALLIDA"
+    textoTitulo.text = "";
+    textoTitulo.alpha = 1;
+    yield return StartCoroutine(EscribirTexto("MISIÓN CUMPLIDA", 0.15f, textoTitulo));
+
+    yield return new WaitForSeconds(1.5f);
+    // Mostrar botones
+    botonReintentar.gameObject.SetActive(true);
+    botonSalir.gameObject.SetActive(true);
+  }
 
   IEnumerator EscribirTexto(string texto, float velocidad, TextMeshProUGUI textMeshProUGUI)
   {
