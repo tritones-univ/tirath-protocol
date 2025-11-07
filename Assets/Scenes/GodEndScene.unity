@@ -289,8 +289,8 @@ MonoBehaviour:
   textoTitulo: {fileID: 326782106}
   panelNegro: {fileID: 0}
   panelTexto: {fileID: 818595910}
-  botonReintentar: {fileID: 2037665466}
-  botonSalir: {fileID: 0}
+  botonReintentar: {fileID: 0}
+  botonSalir: {fileID: 2037665466}
   musica: {fileID: 2058427689}
   fxSource: {fileID: 1291970311}
   diapositivas:
