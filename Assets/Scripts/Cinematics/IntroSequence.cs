@@ -116,6 +116,7 @@ public class IntroSequence : MonoBehaviour
 
     yield return new WaitForSeconds(1.5f);
     // Mostrar botones
+    botonReintentar.gameObject.SetActive(true);
     botonSalir.gameObject.SetActive(true);
   }
   IEnumerator FinalBueno()
@@ -133,7 +134,6 @@ public class IntroSequence : MonoBehaviour
 
     yield return new WaitForSeconds(1.5f);
     // Mostrar botones
-    botonReintentar.gameObject.SetActive(true);
     botonSalir.gameObject.SetActive(true);
   }
 
@@ -176,6 +176,6 @@ public class IntroSequence : MonoBehaviour
   public void InicioJuego()
   {
     StopAllCoroutines();
-    SceneManager.LoadScene("Base");
+    SceneManager.LoadScene("Menu");
   }
 }
