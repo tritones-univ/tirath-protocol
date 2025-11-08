@@ -123,6 +123,7 @@ public class UIManager : MonoBehaviour
     private void HandleEscape()
     {
         BuildingSystem.current.CancelPlacement();
+        HotbarController.Instance.HandleCancel();
     }
     public void HandleEscape(InputAction.CallbackContext context)
     {

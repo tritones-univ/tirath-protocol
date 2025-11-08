@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1160,7 +1160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 0d60c12940ec31642b2b7997ce04fa33, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 8e71e51171779d842947049b51ab4f49, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -1187,7 +1187,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: cde26049-6cca-4b32-a0dc-af68a6fe8dea
+    m_ActionId: 6b414ae2-2a79-4a12-9e41-2ccd2f07ea6b
     m_ActionName: 'UIActions/E[/Keyboard/e]'
   - m_PersistentCalls:
       m_Calls:
@@ -1203,7 +1203,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 865ceb77-2e35-40ee-a4f9-1400c6e1a273
+    m_ActionId: 8312ff09-47d1-4933-bbc6-f6d9c6fd0e21
     m_ActionName: 'UIActions/Escape[/Keyboard/escape]'
   - m_PersistentCalls:
       m_Calls:
@@ -1219,7 +1219,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 396730a2-58d4-42c0-8a4c-67eb4874c012
+    m_ActionId: e19380d4-9f34-44cc-a55b-66d4d6b2fdfe
     m_ActionName: 'UIActions/Up[/Keyboard/upArrow]'
   - m_PersistentCalls:
       m_Calls:
@@ -1235,7 +1235,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 3f5ec46c-12de-411e-acf4-c99285bcd08c
+    m_ActionId: 53b09d58-2c59-4f8d-8bc2-aa9724aa2007
     m_ActionName: 'UIActions/Down[/Keyboard/downArrow]'
   - m_PersistentCalls:
       m_Calls:
@@ -1251,8 +1251,64 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 9136ed72-d3de-4378-8625-cf02f52869f4
+    m_ActionId: 26ff2547-3ec9-451d-83c7-5230faed60de
     m_ActionName: 'UIActions/Enter[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 13d9a976-9523-4993-958d-8d152d74d470
+    m_ActionName: 'BuildActions/Select1[/Keyboard/1]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b276cbcf-f9d3-485a-91be-56efbc7e4016
+    m_ActionName: 'BuildActions/Select2[/Keyboard/2]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 37c8f597-a9cc-45a2-be6a-34527cbe5c74
+    m_ActionName: 'BuildActions/Select3[/Keyboard/3]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e693b4cc-daa9-40c3-8800-3f9d2b47fb83
+    m_ActionName: 'BuildActions/Select4[/Keyboard/4]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f3b8c675-84d2-467f-a9bf-b2d749b84690
+    m_ActionName: 'BuildActions/Select5[/Keyboard/5]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 698a6ea6-68d1-498a-b95b-ee4b4df54f4f
+    m_ActionName: 'BuildActions/Select6[/Keyboard/6]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d12c12ec-8787-45f8-b2c8-7c355310bfed
+    m_ActionName: 'BuildActions/Select7[/Keyboard/7]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: d251a296-018b-4b45-a44a-38a18c0c7696
+    m_ActionName: 'BuildActions/Select8[/Keyboard/8]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7631a9de-7dd6-4a93-a4ea-f2acaaa5d698
+    m_ActionName: 'BuildActions/Select9[/Keyboard/9]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e3310bec-2f75-4ce7-bb45-92cf8a61726d
+    m_ActionName: 'BuildActions/Select0[/Keyboard/0]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 69ebdc3b-ab07-4273-abe4-96de3d277dff
+    m_ActionName: 'BuildActions/MouseScroll[/Mouse/scroll/y]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c3c3171f-4123-40d7-90c2-0fd5936f9c5a
+    m_ActionName: 'BuildActions/Rotate[/Keyboard/r]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e686701c-5cbe-4f1a-8b71-1a10e7898655
+    m_ActionName: 'BuildActions/Place[/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a900699c-95d3-48ab-9b2b-8d8cc53047e4
+    m_ActionName: 'BuildActions/Cancel[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UIActions
@@ -1268,8 +1324,8 @@ GameObject:
   m_Component:
   - component: {fileID: 285127270}
   - component: {fileID: 285127269}
-  - component: {fileID: 285127272}
   - component: {fileID: 285127271}
+  - component: {fileID: 285127272}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1538,22 +1594,30 @@ MonoBehaviour:
     m_ActionId: e686701c-5cbe-4f1a-8b71-1a10e7898655
     m_ActionName: 'BuildActions/Place[/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 285127272}
-        m_TargetAssemblyTypeName: HotbarController, Assembly-CSharp
-        m_MethodName: HandleCancel
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: a900699c-95d3-48ab-9b2b-8d8cc53047e4
     m_ActionName: 'BuildActions/Cancel[/Keyboard/escape]'
-  m_NeverAutoSwitchControlSchemes: 0
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6b414ae2-2a79-4a12-9e41-2ccd2f07ea6b
+    m_ActionName: 'UIActions/E[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8312ff09-47d1-4933-bbc6-f6d9c6fd0e21
+    m_ActionName: 'UIActions/Escape[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e19380d4-9f34-44cc-a55b-66d4d6b2fdfe
+    m_ActionName: 'UIActions/Up[/Keyboard/upArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 53b09d58-2c59-4f8d-8bc2-aa9724aa2007
+    m_ActionName: 'UIActions/Down[/Keyboard/downArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 26ff2547-3ec9-451d-83c7-5230faed60de
+    m_ActionName: 'UIActions/Enter[/Keyboard/enter]'
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: BuildActions
   m_SplitScreenIndex: -1
@@ -1710,7 +1774,6 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
-  - component: {fileID: 330585549}
   - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
@@ -8550,11 +8613,12 @@ MeshFilter:
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &2125581260
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2492577564283872002, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+  m_PrefabInstance: {fileID: 5516132992686606647}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125581253}
+--- !u!1001 &5516132992686606647
+PrefabInstance:
+  m_ObjectHideFlags: 0
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5, y: 0.5, z: 0.5}
@@ -8590,6 +8654,59 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls: []
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2492577564283872002, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492577564283872002, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492577564283872002, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492577564283872002, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492577564283872002, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492577564283872002, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492577564283872002, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492577564283872002, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492577564283872002, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2492577564283872002, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4404745691701903282, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 703ea58915d561a4dbdf450232817bf8, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -8600,10 +8717,9 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1721073542}
   - {fileID: 230965713}
-  - {fileID: 1423894088}
   - {fileID: 111873202}
   - {fileID: 822278851}
-  - {fileID: 2125581260}
+  - {fileID: 5516132992686606647}
   - {fileID: 391171423}
   - {fileID: 828448680}
   - {fileID: 512100806}
