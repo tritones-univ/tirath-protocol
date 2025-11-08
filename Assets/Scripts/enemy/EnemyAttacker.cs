@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyAttacker : EnemyBase
@@ -55,7 +56,16 @@ public class EnemyAttacker : EnemyBase
 
     protected override void Die()
     {
-        // Aquí puedes poner animaciones, efectos, drop
-        gameObject.SetActive(false);
+        PlayIdleAnim();
+        PlayDeathAnim();
+        if (agent != null) agent.isStopped = true;
+        StartCoroutine(DeathDelay());
     }
+
+    private IEnumerator DeathDelay()
+    {
+        yield return new WaitForSeconds(0.333f); // espera animación
+        Destroy(gameObject);
+    }
+
 }
