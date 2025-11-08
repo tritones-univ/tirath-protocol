@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class HotbarController : MonoBehaviour
 {
+    public static HotbarController Instance;
     [Header("Prefabs & UI")]
     public GameObject slotPrefab;
     public Transform slotContainer;
@@ -13,13 +14,19 @@ public class HotbarController : MonoBehaviour
 
     [Header("Selection")]
     public int selectedIndex = -1;
+    void OnEnable()
+    {
+        // foreach (var action in GetComponent<PlayerInput>().actions)
+        // action.performed += ctx => Debug.Log("Performed: " + action.name);
+    }
     void Awake()
     {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
         GenerateSlots();
         UpdateSelectionVisual();
         InitializeSelected();
     }
-
     void GenerateSlots()
     {
         slots.Clear();
@@ -95,9 +102,15 @@ public class HotbarController : MonoBehaviour
         }
     }
 
-    public void HandleCancel(InputAction.CallbackContext context)
+    // Se gestiona desde el UIMAnager en handleEscape
+    /* public void HandleCancel(InputAction.CallbackContext context)
     {
+        Debug.Log("triggering cancel");
         if (!context.performed) return;
+        HandleCancel();
+    } */
+    public void HandleCancel()
+    {
         selectedIndex = -1;
         UpdateSelectionVisual();
     }
