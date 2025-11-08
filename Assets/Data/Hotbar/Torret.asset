@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6549cde7dcbf54aaf1a42ac882eec0, type: 3}
+  m_Name: Torret
+  m_EditorClassIdentifier: Assembly-CSharp::HotbarItem
+  icon: {fileID: 21300000, guid: 71fdbcec578e728449f0be5bd3e5ada9, type: 3}
+  prefab: {fileID: 948061522118001622, guid: 4d992d668c50d6d41961d0c199cd348a, type: 3}
