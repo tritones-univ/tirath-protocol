@@ -3,6 +3,114 @@
     "name": "HotbarActions",
     "maps": [
         {
+            "name": "UIActions",
+            "id": "e2fe4a52-1887-40d2-895e-7b74c9fab77d",
+            "actions": [
+                {
+                    "name": "E",
+                    "type": "Button",
+                    "id": "6b414ae2-2a79-4a12-9e41-2ccd2f07ea6b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Escape",
+                    "type": "Button",
+                    "id": "8312ff09-47d1-4933-bbc6-f6d9c6fd0e21",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Up",
+                    "type": "Button",
+                    "id": "e19380d4-9f34-44cc-a55b-66d4d6b2fdfe",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Down",
+                    "type": "Button",
+                    "id": "53b09d58-2c59-4f8d-8bc2-aa9724aa2007",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Enter",
+                    "type": "Button",
+                    "id": "26ff2547-3ec9-451d-83c7-5230faed60de",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ca61b088-4bcb-4660-9e3b-0ace64d679fe",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "E",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee765e8e-2942-4259-8cfd-5dbad09894b4",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Escape",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a6bda4ac-3dff-4597-aa7d-db08975929df",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "984a8841-95d9-49d3-98ad-98273170feac",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "623d58ea-7129-46da-8fec-eb8029f7ee8b",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Enter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "BuildActions",
             "id": "037cd8c4-31d7-4512-a679-ffe54c149393",
             "actions": [

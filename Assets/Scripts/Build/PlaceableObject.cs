@@ -6,6 +6,7 @@ public class PlaceableObject : MonoBehaviour
     public bool Placed { get; private set; }
     public Vector3Int Size { get; private set; }
     private Vector3[] Vertices;
+    public string objName { get; private set; }
     private void GetColliderVertexPositionsLocal()
     {
         BoxCollider b = gameObject.GetComponent<BoxCollider>();
@@ -49,6 +50,7 @@ public class PlaceableObject : MonoBehaviour
 
     private void Start()
     {
+        objName = Guid.NewGuid().ToString();
         GetColliderVertexPositionsLocal();
         CalculateSizeInCells();
     }
@@ -68,5 +70,6 @@ public class PlaceableObject : MonoBehaviour
         ObjectDrag drag = gameObject.GetComponent<ObjectDrag>();
         Destroy(drag);
         Placed = true;
+        Debug.Log("Colocado " + objName);
     }
 }
