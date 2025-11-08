@@ -6,6 +6,10 @@ public class Greenhouse : MonoBehaviour
     private bool playerInRange = false;
     private PlayerInteraction playerInteraction;
 
+    void Start()
+    {
+        greenhousePanel.SetActive(false);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
