@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Player : LivingEntity
 {
@@ -9,6 +10,8 @@ public class Player : LivingEntity
     {
         // Ejecuta eventos de muerte (UI, respawn, etc.)
         onDeath?.Invoke();
-        gameObject.SetActive(false);
+        Destroy(gameObject);
+        SceneManager.LoadScene("BadEndScene");
+        // gameObject.SetActive(false);
     }
 }
