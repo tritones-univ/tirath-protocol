@@ -24,14 +24,21 @@ public class BuildingSystem : MonoBehaviour
 
         if (CanBePlaced(objectToPlace))
         {
-            Collider collider = objectToPlace.GetComponent<Collider>();
+            // Collider collider = objectToPlace.GetComponent<Collider>();
             // TODO activar en true si se quiere colisionar
-            if (collider != null) collider.enabled = false;
+            // if (collider != null) collider.enabled = false;
 
             objectToPlace.Place();
             Vector3Int start = gridLayout.WorldToCell(objectToPlace.GetStartPosition());
             TakeArea(start, objectToPlace.Size);
-
+            PlaceableNeighbor neighbor = objectToPlace.GetComponent<PlaceableNeighbor>();
+            if (neighbor != null)
+            {
+                neighbor.CheckForNeighborsOnPlace();
+                CollectorDetector detector = objectToPlace.GetComponentInChildren<CollectorDetector>();
+                if (detector != null)
+                    detector.DetectCollectables();
+            }
             InitializeWithObject(selected);
         }
     }
@@ -84,9 +91,8 @@ public class BuildingSystem : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0, rotateAngle, 0);
         GameObject obj = Instantiate(prefab, position, rotation);
         objectToPlace = obj.GetComponent<PlaceableObject>();
-
-        Collider collider = obj.GetComponent<Collider>();
-        if (collider != null) collider.enabled = false;
+        // Collider collider = obj.GetComponent<Collider>();
+        // if (collider != null) collider.enabled = false;
 
         obj.AddComponent<ObjectDrag>();
     }

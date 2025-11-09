@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
 
+public enum PlaceableType { Collector, Conveyor, Storage }
 public class PlaceableObject : MonoBehaviour
 {
-    public bool Placed { get; private set; }
+    public PlaceableType type;
+    public bool Placed { get; set; }
     public Vector3Int Size { get; private set; }
     private Vector3[] Vertices;
     public string objName { get; private set; }
@@ -70,6 +72,13 @@ public class PlaceableObject : MonoBehaviour
         ObjectDrag drag = gameObject.GetComponent<ObjectDrag>();
         Destroy(drag);
         Placed = true;
-        Debug.Log("Colocado " + objName);
+        if (type == PlaceableType.Collector)
+            LineManager.Instance?.RegisterCollector(GetComponent<PlaceableNeighbor>());
+
+    }
+    private void OnDestroy()
+    {
+        if (type == PlaceableType.Collector)
+            LineManager.Instance?.UnregisterCollector(GetComponent<PlaceableNeighbor>());
     }
 }
