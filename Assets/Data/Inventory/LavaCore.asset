@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f3fcbc3d16f404aa3ba27f4250cf14, type: 3}
   m_Name: LavaCore
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  id: cristal-core
-  displayName: Nucleo de Cristal
-  icon: {fileID: 21300000, guid: d17665a41afb9d3498b4e15d33e3dc5d, type: 3}
+  id: lava-core
+  displayName: Nucleo de Lava
+  icon: {fileID: 21300000, guid: cc3f45ed1768a694c9d95074459247e4, type: 3}

@@ -1098,13 +1098,13 @@ MonoBehaviour:
     placeButton: {fileID: 0}
     isCompleted: 0
   - slotObject: {fileID: 3269169286195489455}
-    requieredItem: {fileID: 11400000, guid: 43b224a65d5819e4fbf09afcc1684509, type: 2}
+    requieredItem: {fileID: 11400000, guid: 91672031e99df144b86f4c6085fcb766, type: 2}
     itemImage: {fileID: 0}
     borderSlot: {fileID: 0}
     placeButton: {fileID: 0}
     isCompleted: 0
   - slotObject: {fileID: 1794116778859444924}
-    requieredItem: {fileID: 11400000, guid: 43b224a65d5819e4fbf09afcc1684509, type: 2}
+    requieredItem: {fileID: 11400000, guid: ce61553fd90c0974dba84eae3a38ba38, type: 2}
     itemImage: {fileID: 0}
     borderSlot: {fileID: 0}
     placeButton: {fileID: 0}

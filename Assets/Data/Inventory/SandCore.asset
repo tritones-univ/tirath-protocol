@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63f3fcbc3d16f404aa3ba27f4250cf14, type: 3}
-  m_Name: CritalCore
+  m_Name: SandCore
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  id: cristal-core
-  displayName: Nucleo de Cristal
-  icon: {fileID: 21300000, guid: 774667c37d6a0b44687a02031e4c7e67, type: 3}
+  id: sand-core
+  displayName: Nucleo de las Arenas
+  icon: {fileID: 21300000, guid: 02eb55dd60bec084bb6f74b7ed2e4ea9, type: 3}
