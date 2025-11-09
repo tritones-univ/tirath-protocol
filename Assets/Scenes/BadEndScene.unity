@@ -294,7 +294,7 @@ MonoBehaviour:
   musica: {fileID: 2058427689}
   fxSource: {fileID: 1291970311}
   diapositivas:
-  - imagen: {fileID: 21300000, guid: b1d05d5245331ad4596aa18a4be4a05a, type: 3}
+  - imagen: {fileID: 21300000, guid: 083dbf85fe98cb241b188d9af5c7c619, type: 3}
     texto: "Los sistemas fallaron uno tras otro.\nYa no hab\xEDa energ\xEDa suficiente
       para reparar nada."
     duracion: 4
