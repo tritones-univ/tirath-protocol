@@ -184,36 +184,44 @@ MonoBehaviour:
   textoPrincipal: {fileID: 2092873218}
   textoTitulo: {fileID: 1253114363}
   panelNegro: {fileID: 1517568051}
+  panelTexto: {fileID: 0}
+  botonReintentar: {fileID: 0}
+  botonSalir: {fileID: 0}
   musica: {fileID: 1985814025}
   fxSource: {fileID: 469784040}
   diapositivas:
-  - imagen: {fileID: 21300000, guid: 1c0a350eb112b924dbb8323bef1c83d2, type: 3}
+  - imagen: {fileID: 21300000, guid: 5440b49068fd87242b086f70bc713886, type: 3}
     texto: "Bit\xE1cora de misi\xF3n 045 \u2014 Expedici\xF3n Marn-7.\nDestino: planeta
       Tirath-9, un mundo \xE1rido y s\xEDsmicamente activo, con atm\xF3sfera densa
       y abundancia de minerales cristalinos y biomasa energ\xE9tica."
     duracion: 3
     efecto: {fileID: 0}
-  - imagen: {fileID: 21300000, guid: d24dc29de31a0f14c8c09dd68608cfb2, type: 3}
+    temblar: 0
+  - imagen: {fileID: 21300000, guid: 9db1d1157f4569d40b2802718195d751, type: 3}
     texto: "Aterrizaje exitoso. Los cristales del suelo parecen una fuente de energ\xEDa
       ilimitada.\nComenzamos la construcci\xF3n de la base.\t"
     duracion: 3
     efecto: {fileID: 0}
-  - imagen: {fileID: 21300000, guid: 71c3bb27bf50b0a40adb5b1fb079b871, type: 3}
+    temblar: 0
+  - imagen: {fileID: 21300000, guid: d1921c1cf8bed044a8ab2e68b36338f1, type: 3}
     texto: "Tres meses despu\xE9s, la base Outpost Eos est\xE1 completamente operativa.\nLos
       cristales alimentan cada sistema\u2026 pero algo cambia en su pulso."
     duracion: 3
     efecto: {fileID: 0}
-  - imagen: {fileID: 21300000, guid: 609f54a93f6c63745a3c2750a92c0d1d, type: 3}
+    temblar: 0
+  - imagen: {fileID: 21300000, guid: d1921c1cf8bed044a8ab2e68b36338f1, type: 3}
     texto: "El planeta comenz\xF3 a temblar. Los cristales se fracturaron y liberaron
       energ\xEDa descontrolada.\nLa nave Asterion qued\xF3 da\xF1ada. El n\xFAcleo
       colapsar\xE1 en 5 d\xEDas."
     duracion: 4
     efecto: {fileID: 8300000, guid: 87d7ffe9a659c3c449a04e91653dd267, type: 3}
-  - imagen: {fileID: 21300000, guid: c2b10178e063e91429d368ff9ee88d37, type: 3}
+    temblar: 1
+  - imagen: {fileID: 21300000, guid: 058b65e3e4f855a4e8659a87e3bf4f36, type: 3}
     texto: "Cuando cae la noche, algo despierta entre los cristales.\nNo solo el
       planeta est\xE1 muriendo\u2026"
     duracion: 3
     efecto: {fileID: 8300000, guid: c7522db7757cb684890267b4d2771221, type: 3}
+    temblar: 0
   siguienteEscena: Base
   fadeSpeed: 1
 --- !u!4 &380603136

@@ -294,20 +294,23 @@ MonoBehaviour:
   musica: {fileID: 2058427689}
   fxSource: {fileID: 1291970311}
   diapositivas:
-  - imagen: {fileID: 21300000, guid: 3e8e17e09c879d043b1360cf7bf1a837, type: 3}
+  - imagen: {fileID: 21300000, guid: 9dcececd8bb8a184a973e0b2ac96b738, type: 3}
     texto: "Tras d\xEDas de trabajo, los motores finalmente rugieron una vez m\xE1s.\nEl
       planeta temblaba\u2026 pero la esperanza encend\xEDa el cielo."
     duracion: 3
-    efecto: {fileID: 0}
-  - imagen: {fileID: 21300000, guid: a3fe5e411145e6e46a60edf33536d8c6, type: 3}
+    efecto: {fileID: 8300000, guid: fabfeb9c190d7c54e93bfba7804ef4a1, type: 3}
+    temblar: 1
+  - imagen: {fileID: 21300000, guid: fbd10903f58b4ce4c83c29eae06c39f4, type: 3}
     texto: "El Asterion dej\xF3 atr\xE1s Tirath."
     duracion: 3
     efecto: {fileID: 8300000, guid: fabfeb9c190d7c54e93bfba7804ef4a1, type: 3}
+    temblar: 0
   - imagen: {fileID: 21300000, guid: 68255739cb0da0a46ab2296423039284, type: 3}
     texto: "[Transmisi\xF3n establecida] \u2014 Asterion, logro reconectar con el
       centro de mando."
     duracion: 3
     efecto: {fileID: 8300000, guid: 93d1d9d4f49003d469702a6d69aaca9c, type: 3}
+    temblar: 0
   siguienteEscena: Base
   fadeSpeed: 5
 --- !u!4 &380603136
