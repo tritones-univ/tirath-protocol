@@ -108,14 +108,30 @@ public class TurretController : MonoBehaviour
     }
 
     private void Disparar()
+{
+    if (proyectilPrefab == null || puntoDisparo == null) return;
+
+    GameObject nuevoProyectil = Instantiate(
+        proyectilPrefab,
+        puntoDisparo.position,
+        modeloTorreta.rotation
+    );
+
+    // Ignora colisiones con el collider de la torreta
+    Collider torreCollider = GetComponent<Collider>();
+    Collider proyectilCollider = nuevoProyectil.GetComponent<Collider>();
+
+    if (torreCollider != null && proyectilCollider != null)
     {
-        if (proyectilPrefab == null || puntoDisparo == null) return;
-
-        GameObject nuevoProyectil = Instantiate(
-            proyectilPrefab,
-            puntoDisparo.position,
-            modeloTorreta.rotation
-        );
-
+        Physics.IgnoreCollision(proyectilCollider, torreCollider);
     }
+
+    // También ignora el rango si tiene un collider
+    SphereCollider rangoCollider = GetComponent<SphereCollider>();
+    if (rangoCollider != null)
+    {
+        Physics.IgnoreCollision(proyectilCollider, rangoCollider);
+    }
+}
+
 }

@@ -3,8 +3,9 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float velocidad = 20f;
-    public float daño = 10f;
+    public float damage = 10f;
     public float vidaMax = 3f;
+    public float hitCooldown = 0.5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,10 +19,12 @@ public class Projectile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+
+        IDamageable target = other.GetComponent<IDamageable>();
+
+        if (target != null && !target.isDead)
         {
-            // Aquí puedes acceder a un script del enemigo y aplicarle daño
-            // other.GetComponent<Enemigo>().RecibirDaño(daño);
+            target.TakeDamage(damage);
             Destroy(gameObject);
         }
     }
