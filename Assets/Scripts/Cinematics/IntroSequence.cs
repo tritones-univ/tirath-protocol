@@ -12,7 +12,6 @@ public class IntroSlide
   [TextArea(2, 5)] public string texto;
   public float duracion = 8f;
   public AudioClip efecto;
-  public bool temblar;
 }
 
 
@@ -69,8 +68,6 @@ public class IntroSequence : MonoBehaviour
       if (slide.efecto != null && fxSource != null)
         fxSource.PlayOneShot(slide.efecto);
 
-      if (slide.temblar)
-        StartCoroutine(VibrarImagen(panelFondo, 10, 5f));
       // Escribir texto con efecto
       yield return StartCoroutine(EscribirTexto(slide.texto, 0.05f, textoPrincipal));
 
@@ -164,26 +161,6 @@ public class IntroSequence : MonoBehaviour
 
     color.a = targetAlpha;
     img.color = color;
-  }
-  IEnumerator VibrarImagen(Image img, float duracion, float intensidad)
-  {
-    RectTransform rt = img.rectTransform;
-    Vector3 posOriginal = rt.anchoredPosition;
-
-    float tiempo = 0f;
-    while (tiempo < duracion)
-    {
-      // Genera un pequeño movimiento aleatorio
-      float offsetX = Random.Range(-1f, 1f) * intensidad;
-      float offsetY = Random.Range(-1f, 1f) * intensidad;
-      rt.anchoredPosition = posOriginal + new Vector3(offsetX, offsetY, 0f);
-
-      tiempo += Time.deltaTime;
-      yield return null;
-    }
-
-    // Regresa a la posición original
-    rt.anchoredPosition = posOriginal;
   }
 
   public void SaltarIntro()

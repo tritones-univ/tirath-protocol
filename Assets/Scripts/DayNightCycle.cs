@@ -1,35 +1,24 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class DayNightCycle : MonoBehaviour
 {
   // Duración de un día completo (día y noche) en segundos reales.
   // Puedes ajustarlo en el Inspector de Unity.
   [Tooltip("Duración de un día completo (en segundos reales).")]
-  public float fullDayDurationSeconds = 480f;
-  public float hourInit = 0.3f;
+  public float fullDayDurationSeconds = 60f;
 
   // Velocidad de rotación del sol/luna
   private float rotationSpeed;
 
-  [Header("UI")]
+  [Header("Relog UI")]
   public TextMeshProUGUI clockText;
-  public TextMeshProUGUI dayText;
 
-  public Image imageClock;
-
-  public Sprite[] statusClock;
   // El tiempo actual del ciclo (entre 0 y 1)
-  [HideInInspector] public float timeOfDay;
-  [HideInInspector] public float dayRest = 4;
+  [HideInInspector]
+  public float timeOfDay;
   void Start()
   {
-    timeOfDay = hourInit;
-    dayText.text = $"{dayRest + 1} Dias restantes";
-    imageClock.sprite = statusClock[0];
-
     // Calculamos la velocidad de rotación: 360 grados por la duración total.
     // Dividimos por Time.deltaTime en Update para que sea consistente.
     rotationSpeed = 360f / fullDayDurationSeconds;
@@ -42,12 +31,7 @@ public class DayNightCycle : MonoBehaviour
     if (timeOfDay >= 1f)
     {
       timeOfDay = 0f;
-      dayRest--;
-      dayText.text = $"{dayRest + 1} Dias restantes";
-      if (dayRest < 0)
-      {
-        SceneManager.LoadScene("BadEndScene");
-      }
+      Debug.Log("¡Un nuevo día ha comenzado!");
     }
     float xRotation = timeOfDay * 360f - 90f;
 
@@ -63,15 +47,6 @@ public class DayNightCycle : MonoBehaviour
 
     int hours = Mathf.FloorToInt(currentMinutes / 60f);
     int minutes = Mathf.FloorToInt(currentMinutes % 60f);
-
-    if (hours >= 6 && hours < 18)
-    {
-      imageClock.sprite = statusClock[0];
-    }
-    else
-    {
-      imageClock.sprite = statusClock[1];
-    }
 
     clockText.text = $"{hours:00}:{minutes:00}";
   }

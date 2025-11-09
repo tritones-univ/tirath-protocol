@@ -47,9 +47,9 @@ public class PlantSlot : MonoBehaviour
         }
 
         // Aquí puedes verificar inventario antes de plantar
+        Debug.Log($"✅ Semilla {currentSeed.seedName} plantada");
         currentSeed = selectedSeed;
         isPlanted = true;
-        Debug.Log($"✅ Semilla {currentSeed.seedName} plantada");
 
         plantImage.sprite = currentSeed.seedSprite;
         plantImage.enabled = true;
