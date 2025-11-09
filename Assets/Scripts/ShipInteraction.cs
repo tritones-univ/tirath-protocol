@@ -14,6 +14,7 @@ public class ShipInteraction : MonoBehaviour
     void TogglePanel()
     {
         shipPanel.SetActive(!shipPanel.activeSelf);
+        UIManager.Instance.HUDPanel.SetActive(!shipPanel.activeSelf);
     }
 
     private void OnInsteract()
