@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public GameObject pausePanel;
     public GameObject optionsPanel;
     public InventoryUI inventoryUI;
+    public GameObject MapaPanel;
 
     [Header("Pause Menu Buttons")]
     public Button[] pauseButtons;
@@ -21,6 +22,7 @@ public class UIManager : MonoBehaviour
     public bool IsInventoryOpen => inventoryPanel.activeSelf;
     public bool IsPauseOpen => pausePanel.activeSelf;
     public bool IsOptionsOpen => optionsPanel.activeSelf;
+    public bool IsMapaOpen => MapaPanel.activeSelf;
     void Awake()
     {
         if (Instance == null) Instance = this;
@@ -34,7 +36,9 @@ public class UIManager : MonoBehaviour
         HideInventory();
         HidePauseMenu();
         HideOptions();
+        HideMapa();
         HighlightButton(selectedButtonIndex);
+
     }
 
     #region Panel Show/Hide
@@ -72,6 +76,18 @@ public class UIManager : MonoBehaviour
     {
         TooltipUI.Instance.Hide();
         pausePanel.SetActive(false);
+    }
+    public void ShowMapa()
+    {
+        TooltipUI.Instance.Hide();
+        MapaPanel.SetActive(true);
+        selectedButton = null;
+        HighlightButton(selectedButtonIndex);
+    }
+    public void HideMapa()
+    {
+        TooltipUI.Instance.Hide();
+        MapaPanel.SetActive(false);
     }
 
     public void ShowOptions()
@@ -114,12 +130,28 @@ public class UIManager : MonoBehaviour
             HideHUD();
             ShowInventory();
         }
-        else if (IsInventoryOpen)
+        else if (IsMapaOpen)
         {
             HideInventory();
             ShowHUD();
         }
     }
+    public void HandleM(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+
+        if (IsMapaOpen)
+        {
+            HideMapa();
+            ShowHUD();
+        }
+        else
+        {
+            HideHUD();
+            ShowMapa();
+        }
+    }
+
     private void HandleEscape()
     {
         BuildingSystem.current.CancelPlacement();

@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/BosqueCristal.unity
+    guid: 72e0654bb797a634d865a68289e66b37
+  - enabled: 1
     path: Assets/Scenes/Base.unity
     guid: 0877591d443a8194eac0d155d594861f
+  - enabled: 1
+    path: Assets/Scenes/CorazonTirath.unity
+    guid: 75e327902d254ce4285ea2797083021d
+  - enabled: 1
+    path: Assets/Scenes/ObeliscoArenas.unity
+    guid: 3b67a6f5396cf564bb8694ddc2fe0cf9
+  - enabled: 1
+    path: Assets/Scenes/ValleCeniza.unity
+    guid: fe140f6190a79c141b5cc52c94164025
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2055d71a53919d742add1ddeb5e91e18, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
