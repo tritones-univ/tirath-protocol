@@ -122,10 +122,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
@@ -148,9 +148,9 @@ MonoBehaviour:
   modeloTorreta: {fileID: 2028248520215239508}
   puntoDisparo: {fileID: 7307637758258330281}
   proyectilPrefab: {fileID: 6678248875514905921, guid: d3ef3a5a4ef75cf4a89b09d6012b6c9c, type: 3}
-  rango: 10
+  rango: 30
   velocidadRotacion: 5
-  cadenciaDisparo: 1
+  cadenciaDisparo: 2
 --- !u!1 &2340874679777902528
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +176,7 @@ Transform:
   m_GameObject: {fileID: 2340874679777902528}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.193, z: 0.735}
+  m_LocalPosition: {x: 0, y: 0.193, z: 0.966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

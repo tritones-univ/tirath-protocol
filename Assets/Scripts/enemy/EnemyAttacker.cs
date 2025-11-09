@@ -10,42 +10,38 @@ public class EnemyAttacker : EnemyBase
 
     protected override void FindTarget()
     {
-        // Primero busca estructuras en rango
-        Collider[] structures = Physics.OverlapSphere(transform.position, detectionRadius, structureLayer);
-        Transform bestStructure = null;
-        float bestDist = Mathf.Infinity;
+        IDamageable bestTarget = null;
+        float closestDistSqr = Mathf.Infinity;
 
+        Vector3 myPos = transform.position;
+
+        // 1️⃣ Buscar estructuras en rango
+        Collider[] structures = Physics.OverlapSphere(myPos, detectionRadius, structureLayer);
         foreach (var s in structures)
         {
-            float dist = Vector3.SqrMagnitude(s.transform.position - transform.position);
-            if (dist < bestDist)
+            float distSqr = (s.transform.position - myPos).sqrMagnitude;
+            if (distSqr < closestDistSqr)
             {
-                bestDist = dist;
-                bestStructure = s.transform;
+                closestDistSqr = distSqr;
+                bestTarget = s.GetComponent<IDamageable>();
             }
         }
 
-        // Luego busca jugador
-        Collider[] players = Physics.OverlapSphere(transform.position, detectionRadius, playerLayer);
-        Transform playerTransform = players.Length > 0 ? players[0].transform : null;
+        // 2️⃣ Buscar jugador
+        Collider[] players = Physics.OverlapSphere(myPos, detectionRadius, playerLayer);
+        if (players.Length > 0)
+        {
+            Transform playerTransform = players[0].transform;
+            float playerDistSqr = (playerTransform.position - myPos).sqrMagnitude;
 
-        // Lógica de prioridad
-        if (bestStructure != null && Mathf.Sqrt(bestDist) <= structurePriorityDistance)
-        {
-            target = bestStructure.GetComponent<IDamageable>();
+            // Solo cambiar a jugador si no hay estructuras dentro de la distancia de prioridad
+            if (closestDistSqr > structurePriorityDistance * structurePriorityDistance || bestTarget == null)
+            {
+                bestTarget = players[0].GetComponent<IDamageable>();
+            }
         }
-        else if (playerTransform != null)
-        {
-            target = playerTransform.GetComponent<IDamageable>();
-        }
-        else if (bestStructure != null)
-        {
-            target = bestStructure.GetComponent<IDamageable>();
-        }
-        else
-        {
-            target = null;
-        }
+
+        target = bestTarget;
     }
 
     protected override void Attack(IDamageable target)
@@ -67,5 +63,4 @@ public class EnemyAttacker : EnemyBase
         yield return new WaitForSeconds(0.333f); // espera animación
         Destroy(gameObject);
     }
-
 }
