@@ -258,8 +258,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7373388843256445420}
-        m_TargetAssemblyTypeName: SmartSceneLoader, Assembly-CSharp
-        m_MethodName: LoadSceneAndSaveCurrent
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: LoadNewScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -527,8 +527,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7373388843256445420}
-        m_TargetAssemblyTypeName: SmartSceneLoader, Assembly-CSharp
-        m_MethodName: LoadSceneAndSaveCurrent
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: LoadNewScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -754,8 +754,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7373388843256445420}
-        m_TargetAssemblyTypeName: SmartSceneLoader, Assembly-CSharp
-        m_MethodName: LoadSceneAndSaveCurrent
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: LoadNewScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -887,8 +887,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7373388843256445420}
-        m_TargetAssemblyTypeName: SmartSceneLoader, Assembly-CSharp
-        m_MethodName: LoadSceneAndSaveCurrent
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: LoadNewScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1292,8 +1292,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7373388843256445420}
-        m_TargetAssemblyTypeName: SmartSceneLoader, Assembly-CSharp
-        m_MethodName: LoadSceneAndSaveCurrent
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
+        m_MethodName: LoadNewScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

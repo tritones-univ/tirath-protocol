@@ -90,6 +90,7 @@ public class BuildingSystem : MonoBehaviour
 
         Quaternion rotation = Quaternion.Euler(0, rotateAngle, 0);
         GameObject obj = Instantiate(prefab, position, rotation);
+        obj.tag = "BuiltStructure";
         objectToPlace = obj.GetComponent<PlaceableObject>();
         // Collider collider = obj.GetComponent<Collider>();
         // if (collider != null) collider.enabled = false;

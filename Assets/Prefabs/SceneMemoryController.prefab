@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6987858763294603338}
-  - component: {fileID: 2875772534447513399}
+  - component: {fileID: 7941211730086606389}
   m_Layer: 0
   m_Name: SceneMemoryController
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2875772534447513399
+--- !u!114 &7941211730086606389
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
