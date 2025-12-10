@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a7c63e00dfdd1241aa7b9b43c656cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlaceableObject
+  type: 3
 --- !u!114 &6278958502522819226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,7 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e46caa3883107a345804fa591a02f9d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Structure
-  maxHealth: 100
+  _maxHealth: 250
   destroyOnDeath: 1
 --- !u!65 &315006321259745463
 BoxCollider:
@@ -150,7 +151,7 @@ MonoBehaviour:
   proyectilPrefab: {fileID: 6678248875514905921, guid: d3ef3a5a4ef75cf4a89b09d6012b6c9c, type: 3}
   rango: 30
   velocidadRotacion: 5
-  cadenciaDisparo: 2
+  cadenciaDisparo: 10
 --- !u!1 &2340874679777902528
 GameObject:
   m_ObjectHideFlags: 0

@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
   velocidad: 10
-  damage: 3
+  damage: 10
   vidaMax: 3
   hitCooldown: 0.5
 --- !u!54 &4152081627935594445

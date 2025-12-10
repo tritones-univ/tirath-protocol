@@ -3,8 +3,15 @@ using UnityEngine;
 public abstract class LivingEntity : MonoBehaviour, IDamageable
 {
     [Header("Salud")]
-    [SerializeField] protected float maxHealth = 100f;
-    protected float currentHealth;
+    // Hacemos el campo serializado público para que el Slider pueda leerlo.
+    // Esto es más seguro que solo hacerlo 'public' si quieres que se mantenga 'readonly'.
+    [SerializeField] private float _maxHealth = 100f; // Renombramos el campo privado
+
+    // Propiedad pública de solo lectura para obtener el valor máximo.
+    public float maxHealth => _maxHealth;
+
+    // Hacemos 'currentHealth' pública (solo lectura) para que el Slider pueda leerla
+    public float currentHealth { get; protected set; } // Puede ser leído por otros, pero solo modificado por clases hijas o la propia clase
 
     protected virtual void Awake()
     {

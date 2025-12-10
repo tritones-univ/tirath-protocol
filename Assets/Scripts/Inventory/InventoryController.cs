@@ -7,16 +7,35 @@ public class InventoryItem
 }
 public class InventoryController : MonoBehaviour
 {
+    // Usa un patrón Singleton estático para acceder desde cualquier lugar
     public static InventoryController Instance;
+
+    // Tu diccionario privado para almacenar los ítems
     private Dictionary<string, InventoryItem> items;
+
     void Awake()
     {
-        if (Instance == null) Instance = this;
-        if (items == null) items = new Dictionary<string, InventoryItem>();
+        // 1. Implementación del Singleton
+        if (Instance == null)
+        {
+            // Si no hay otra instancia, esta es la instancia única
+            Instance = this;
 
-        else Destroy(gameObject);
+            // ¡Paso clave! Evita que este GameObject sea destruido al cargar una nueva escena.
+            DontDestroyOnLoad(gameObject);
+
+            // Inicializa el diccionario si es la primera vez que se crea
+            if (items == null)
+            {
+                items = new Dictionary<string, InventoryItem>();
+            }
+        }
+        else
+        {
+            // Si ya existe una instancia, destruye este nuevo objeto duplicado
+            Destroy(gameObject);
+        }
     }
-
     public void AddItem(ItemData item, int quantity)
     {
         if (items == null || quantity <= 0) return;
