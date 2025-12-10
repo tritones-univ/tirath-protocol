@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5164678456444468740}
-  - component: {fileID: 4421726332164478972}
+  - component: {fileID: 8585688765905146587}
   m_Layer: 0
   m_Name: GameStateManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4421726332164478972
+--- !u!114 &8585688765905146587
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,6 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5185795524557673953}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d71a1070701db9140bd981340df3f6ba, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b89342880fecc5439a4f72076a80f1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
+  buildablePrefabs:
+  - {fileID: 7537098892252966274, guid: 17c9173dc8e3a21458ce72f73680f392, type: 3}
+  - {fileID: 6622599983808090884, guid: 5e115fa182c53d54095c53e67c501acd, type: 3}
+  - {fileID: 6622599983808090884, guid: d257636a8a428454eb6d48c9e1b53ac4, type: 3}
+  - {fileID: 5121632647648342035, guid: 72b1fe409d4199f49af524a688a8a802, type: 3}
