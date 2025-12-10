@@ -5,15 +5,19 @@ public class SmartSceneLoader : MonoBehaviour
 {
     public void LoadSceneAndSaveCurrent(string newSceneName)
     {
+        // Verifica si la escena ya está activa
         if (SceneManager.GetActiveScene().name == newSceneName)
         {
             Debug.Log("Ya estás en la escena, no se recarga.");
-            return; // No recargar
+            return;
         }
+
         // 1️⃣ Guardar el estado de la escena actual
         var currentScene = SceneManager.GetActiveScene().name;
 
-        var memoryController = FindObjectOfType<SceneMemoryController>();
+        // ** CORRECCIÓN: Acceder directamente al Singleton **
+        var memoryController = SceneMemoryController.Instance;
+
         if (memoryController != null)
         {
             memoryController.SaveState();
@@ -21,7 +25,8 @@ public class SmartSceneLoader : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No se encontró SceneMemoryController en la escena actual.");
+            // Este caso debería ser raro si SceneMemoryController usa DontDestroyOnLoad
+            Debug.LogWarning("No se encontró SceneMemoryController (Instance) en la escena actual.");
         }
 
         // 2️⃣ Cambiar de escena

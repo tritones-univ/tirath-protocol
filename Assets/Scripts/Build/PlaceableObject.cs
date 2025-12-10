@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public enum PlaceableType { Collector, Conveyor, Storage }
+public enum PlaceableType { Collector, Conveyor, Storage ,Torret}
 public class PlaceableObject : MonoBehaviour
 {
     public PlaceableType type;
