@@ -58,17 +58,25 @@ public class SceneMemoryController : MonoBehaviour
     {
         if (GameStateManager.Instance == null) return;
 
-        // 1. Crea un nuevo objeto de datos para guardar el estado actual
-        SceneData currentData = new SceneData();
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        // --- CAMBIO CLAVE: RECUPERAR DATOS ANTERIORES EN LUGAR DE CREAR NUEVOS ---
+        SceneData currentData = GameStateManager.Instance.GetSceneState(currentSceneName);
+
+        // Si no existía (raro, pero posible si no se llamó al Start), creamos el base.
+        if (currentData == null)
+        {
+            currentData = new SceneData();
+        }
+
+        // --- LIMPIAR Y RECALCULAR ESTRUCTURAS CONSTRUIDAS (para no duplicar) ---
+        currentData.builtStructures.Clear(); // Limpiamos la lista de estructuras
 
         // 2. Encuentra todas las estructuras construidas actualmente en la escena
-        // Necesitas que tus estructuras construidas tengan una etiqueta o un script
-        // que las identifique fácilmente, por ejemplo, la etiqueta "BuiltStructure".
         GameObject[] structures = GameObject.FindGameObjectsWithTag("BuiltStructure");
 
         foreach (GameObject structure in structures)
         {
-            // El nombre del objeto debería coincidir con el PrefabID
             string id = structure.name.Replace("(Clone)", "").Trim();
 
             BuiltStructureData builtData = new BuiltStructureData(
@@ -80,8 +88,9 @@ public class SceneMemoryController : MonoBehaviour
             currentData.builtStructures.Add(builtData);
         }
 
-        // 3. Guarda la información en el gestor persistente
-        GameStateManager.Instance.SaveSceneState(sceneName, currentData);
+        // 3. Guarda la información actualizada (incluyendo la lista de destruidos que YA estaba allí)
+        GameStateManager.Instance.SaveSceneState(currentSceneName, currentData);
+        Debug.Log($"Guardado final: {currentData.builtStructures.Count} estructuras, {currentData.destroyedObjects.Count} objetos destruidos.");
     }
 
     // Sobrecarga simple del método de guardado para la primera visita (estado vacío)

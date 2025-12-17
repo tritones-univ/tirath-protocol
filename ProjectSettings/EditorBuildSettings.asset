@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ObeliscoArenas.unity
     guid: 3b67a6f5396cf564bb8694ddc2fe0cf9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Base_n.unity
     guid: 98c81c406b3984443be37e3c05577bab
   - enabled: 1

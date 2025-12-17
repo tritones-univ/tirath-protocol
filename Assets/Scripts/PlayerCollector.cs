@@ -12,6 +12,11 @@ public class PlayerCollector : MonoBehaviour
         if (itemWorld != null && inventory != null)
         {
             inventory.AddItem(itemWorld.data, itemWorld.quantity);
+            DestructibleObject destructibleObject = other.GetComponent<DestructibleObject>();
+            if (destructibleObject != null)
+            {
+                destructibleObject.DestroyObjectByPlayer();
+            }
             Destroy(other.gameObject);
         }
     }

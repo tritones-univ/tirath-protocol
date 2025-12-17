@@ -62,6 +62,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d9d451c0e55823418ab00f190ace21f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 712646322197630986}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0d9d451c0e55823418ab00f190ace21f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6930829633953093018}
   m_SourcePrefab: {fileID: 100100000, guid: 0d9d451c0e55823418ab00f190ace21f, type: 3}
 --- !u!1 &719227484957587073 stripped
 GameObject:
@@ -103,3 +106,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15304503, y: 0.8192374, z: 0.9875386}
   m_Center: {x: -0.0032316744, y: -0.0053807497, z: -0.0016777813}
+--- !u!114 &6930829633953093018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719227484957587073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e386fdc1b814ee44a78a0936cd2f9a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestructibleObject
+  uniqueID: corazon-tirath

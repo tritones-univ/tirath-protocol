@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         // Nota: Asegúrate de que UIManager.Instance exista o quita esta línea si no es necesaria.
         // if (!UIManager.Instance.IsHUDOpen) return; 
 
-        Debug.Log($"Valor de moveInput: {moveInput}");
+        // Debug.Log($"Valor de moveInput: {moveInput}");
         // Transforma el Vector2 de entrada (plano XZ) a un Vector3.
         Vector3 inputDir = new Vector3(moveInput.x, 0, moveInput.y);
 
